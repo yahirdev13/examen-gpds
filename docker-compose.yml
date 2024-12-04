@@ -15,7 +15,7 @@ services:
       - "9200:3306"
 
   web-ordinario:
-   build:
+    build:
       context: ./ordinario
       dockerfile: Dockerfile
     container_name: Ordinario
