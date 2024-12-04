@@ -12,6 +12,16 @@ services:
     ports:
       - "9200:3306"
 
+      //volume apuntando a ordinario_edit
+  web-ordinario-edit:
+    build:
+      context: ./ordinario_edit
+      dockerfile: Dockerfile
+    container_name: Ordinario-Edit
+    ports:
+      - "9101:80"
+
+      
   web-ordinario:
     build:
       context: ./ordinario
