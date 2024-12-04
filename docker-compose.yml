@@ -1,0 +1,29 @@
+services:
+  mysql:
+    image: mysql:8.0.1
+    container_name: mysql
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: i20213tn102
+      MYSQL_USER: ordinario
+      MYSQL_PASSWORD: ordinario2024
+      MYSQL_DATABASE: ordinario_db
+    networks:
+      - examen
+      ports:
+      - "9200:3306"
+
+  web-ordinario:
+   build:
+      context: ./ordinario
+      dockerfile: Dockerfile
+    container_name: Ordinario
+    ports:
+      - "9100:80"
+    networks:
+      - examen
+
+networks:
+  examen:
+    driver: bridge
