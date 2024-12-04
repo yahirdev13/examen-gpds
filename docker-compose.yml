@@ -9,7 +9,7 @@ services:
       MYSQL_USER: ordinario
       MYSQL_PASSWORD: ordinario2024
       MYSQL_DATABASE: ordinario_db
-      ports:
+    ports:
       - "9200:3306"
 
   web-ordinario:
