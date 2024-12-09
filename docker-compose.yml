@@ -19,5 +19,4 @@ services:
     container_name: Ordinario
     ports:
       - "9100:80"
-    volumes:
-      - ./ordinario_edit:/usr/share/nginx/html
+
